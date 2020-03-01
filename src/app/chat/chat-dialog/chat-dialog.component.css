@@ -1,0 +1,7 @@
+.from{
+  @include float-right;
+  border: 4px solid #ff00dd;
+}
+.to{
+
+}
