@@ -1,15 +1,6 @@
 
 /* Full-width input fields */
-.parent{
-    background-image: url("https://www.unitedvanlines.com/wp-content/uploads/2019/10/GettyImages-698733848.jpg");
-    background-repeat: no-repeat;
-    height: 150vh;
-    background-size: cover;
-    min-width: 100%;
-    position: relative;
-}
-
-input[type=text], input[type=password] {
+input{
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -18,18 +9,8 @@ input[type=text], input[type=password] {
     background: #f1f1f1;
   }
 
-  input[type=text], input[type=email] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-  
 /* Set a style for all buttons */
 button {
-    
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -38,20 +19,12 @@ button {
     opacity: 0.8
   }
 
- 
-  
-/* Add padding to container elements */
-.container {
-  padding: 10px;
- 
-}
-
 /* Modal Content/Box */
 .modal-content {
-  
-  margin: 110px; /* 5% from the top, 15% from the bottom and centered */
+
   border: 1px solid #888;
-  width: 40%; /* Could be more or less, depending on screen size */
-  
+  padding: 1em;
+  /* Could be more or less, depending on screen size */
+
 }
 

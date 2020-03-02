@@ -1,7 +1,6 @@
-<div class="container col-7 float-left">
   <div class="card">
     <div class="card-header">
-      <h2>Knowledge Bot</h2>
+      <h2>Chat</h2>
     </div>
     <div class="card-body" id="card-body">
     <ng-container *ngFor="let message of messages | async">
@@ -12,9 +11,8 @@
     </ng-container>
     </div>
       <input type="text" placeholder="your message here" [(ngModel)]="formValue" (keyup.enter)="sendMessage()">
-    <button (click)="sendMessage()">Send</button>
+    <button class="btn btn-primary" (click)="sendMessage()">Send</button>
   </div>
-</div>
 
 
 

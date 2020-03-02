@@ -14,21 +14,30 @@
 }
 
 .card-header{
-  text-align: center;
   font-weight: bold;
   font-size: larger;
-  background-color: #ffd8a7;
 }
 
 .card-body{
   overflow:auto;
-  height: 35em;
+  height: 30em;
 }
 
-.container{
-  padding-top: 3em;
-  padding-bottom: 3em;
-  padding-left: 5em;
+.card{
+  border: 1px solid #888;
 }
 
+input {
+  padding: 1em;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Set a style for all buttons */
+button {
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8
+}
 

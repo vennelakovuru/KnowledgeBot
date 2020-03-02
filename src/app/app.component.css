@@ -1,0 +1,14 @@
+.container {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-left: 5em;
+}
+
+nav{
+  background-color: cornflowerblue;
+}
+
+h1 {
+  color: blue;
+  font-weight: bolder;
+}
