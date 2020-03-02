@@ -1,10 +1,21 @@
-<h1>Knowledge Bot</h1>
-<ng-container *ngFor="let message of messages | async">
-   <div class=”message” [ngClass]="{ 'from': message.sentBy === 'bot',
+<div class="container col-7 float-left">
+  <div class="card">
+    <div class="card-header">
+      <h2>Knowledge Bot</h2>
+    </div>
+    <div class="card-body" id="card-body">
+    <ng-container *ngFor="let message of messages | async">
+      <div class="alert" [ngClass]="{ 'from': message.sentBy === 'bot',
                                       'to': message.sentBy === 'user' }">
-    {{ message.content }} 
+        {{ message.content }} 
+      </div>
+    </ng-container>
+    </div>
+      <input type="text" placeholder="your message here" [(ngModel)]="formValue" (keyup.enter)="sendMessage()">
+    <button (click)="sendMessage()">Send</button>
+  </div>
 </div>
-</ng-container>
-<label for="nameField">Your Message</label>
-<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
-<button (click)="sendMessage()">Send</button>
+
+
+
+

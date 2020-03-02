@@ -16,13 +16,15 @@ export class ChatDialogComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('hey');
     this.messages = this.chat.conversation.asObservable().pipe(scan((acc, val) => acc.concat(val) ));
   }
 
   sendMessage() {
     this.chat.converse(this.formValue);
+    const topPos = document.querySelector('#card-body').scrollHeight;
+    console.log(topPos);
     this.formValue = '';
+    document.getElementById('card-body').scrollTop = topPos;
   }
 
 }
