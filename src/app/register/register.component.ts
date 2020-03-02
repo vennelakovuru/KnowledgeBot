@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  public email: any;
+  public password: string;
+  public repeatPassword : any;
+  public rememberMe: boolean;
+  public error: string;
+
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
