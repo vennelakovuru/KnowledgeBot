@@ -1,15 +1,20 @@
-const express = require('express')
-const server = express()
+const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const server = express();
 
+server.use(cors());
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({extended: false}));
 
-mongoose.connect('mongodb+srv://jagruthi6:<Infy@@19>@cluster0-8fknu.mongodb.net/test?retryWrites=true&w=majority')
-.then(() => console.log('connection successful'))
-.catch((err) => console.log(err));
+mongoose.connect('mongodb+srv://vennela:vennela@cluster0-2wzvk.mongodb.net/test?retryWrites=true&w=majority')
+  .then(() => console.log('connection successful'))
+  .catch((err) => console.log(err));
 
-const apiRouter = require('./Routes/route');
-app.use('/api', apiRouter);
+const apiRouter = require('./routes/routes');
+server.use('/api', apiRouter);
 
-app.listen(3000, () => {
+server.listen(3000, () => {
   console.log('Server 3000 started!')
-})
+});

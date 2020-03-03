@@ -1,39 +1,48 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
+import {Router} from '@angular/router';
+
 const apiUrl = '/api';
 
-@Component ({
+@Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 
 export class LoginComponent implements OnInit {
-  private email: any;
-  register: any;
-  http: any;
-
-  constructor() {
-  }
-  username = '';
+  email: '';
   password = '';
-  registerAttempted: boolean = false;
+  showerrmsg = false;
+  loginattempted = false;
+
+  constructor(private http: HttpClient, private router: Router) {
+  }
+
 
   ngOnInit(): void {
   }
 
-  login(username, password) {
-    console.log(username.value);
-    console.log(password.value);
-    this.registerAttempted = true;
-    const UserInfo = {
-      'emailId' : this.username,
-      'password' : this.password }
-      this.addUser(UserInfo);
-    }
-addUser (UserInfo) {
-  this.http.post('http://localhost:3000/api/login', UserInfo ).subscribe( data => {
-    console.log('register data : ' , data);
-  });
-}
+  login() {
+    this.loginattempted = true;
+    const userInfo = {
+      emailId: this.email,
+      password: this.password
+    };
+    this.getUser(userInfo);
+  }
+
+  getUser(userInfo) {
+    this.http.post('http://localhost:3000/api/login', userInfo).subscribe(data => {
+        console.log('login data : ', data);
+        this.router.navigateByUrl('/knowledgebot');
+      },
+      err => {
+        console.log(err);
+        console.log(err.status);
+        if (err.status !== 201) {
+          this.showerrmsg = true;
+        }
+      });
+  }
 }

@@ -12,8 +12,12 @@
   <input type="password" placeholder="Repeat Password" [(ngModel)]="repeatPassword" name="psw-repeat" required>
 
   <div class="clearfix">
-    <button type="submit" (click)="singUp()" class="btn btn-success" class="btn btn-primary">Sign Up</button>
+    <button type="submit" (click)="register()" class="btn btn-success" class="btn btn-primary">Sign Up</button>
     <button type="button" [routerLink]="['/login']" (click)="cancel()" class="btn btn-danger">Cancel</button>
+  </div>
+
+  <div *ngIf="registerAttempted && registerSuccess" style="color: green"> Registered successfully ! Please <a
+    routerLink='/login'>login here</a>
   </div>
 
 </form>

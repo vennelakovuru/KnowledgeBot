@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
+
 const userSchema = mongoose.Schema({
-    emailId = mongoose.Types._emailId,
-    password = String,
-    confirmPassword = String
+  emailId: String,
+  password: String
 });
 
-module.exports = mongoose.model('UserInfo',userSchema)
+module.exports = mongoose.model('userInfo', userSchema);

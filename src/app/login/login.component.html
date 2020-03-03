@@ -7,8 +7,9 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" [(ngModel)]="password" name="psw" required>
 
-    <button type="button" class="btn btn-primary" (click)="login(username,password)">Submit</button>
-    <h5>Don't have an account? <a routerLink='/register'>register</a></h5>
+    <button type="button" class="btn btn-primary" (click)="login()">Submit</button>
+    <h5>Don't have an account? Please <a routerLink='/register'>register</a></h5>
+    <div *ngIf="loginattempted && showerrmsg" style="color: red"> Invalid Email or Password !</div>
   </form>
 
 

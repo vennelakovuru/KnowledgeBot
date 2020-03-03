@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-//import {HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
 const apiUrl = '/api';
 
 @Component({
@@ -12,31 +12,32 @@ export class RegisterComponent implements OnInit {
 
   public email: any;
   public password: string;
-  public repeatPassword : any;
-  public rememberMe: boolean;
-  public error: string;
-  http: any;
+  public repeatPassword: any;
 
-  constructor(public router: Router) { }
-  registerAttempted: boolean = false;
+  constructor(private router: Router, private http: HttpClient) {
+  }
+
+  registerAttempted = false;
+  registerSuccess = false;
 
   ngOnInit() {
   }
-  register(email, password,repeatPassword) {
-    console.log(email.value);
-    console.log(password.value);
-    this.registerAttempted = true;
-    const UserInfo = {
-      'emailId' : this.email,
-      'password' : this.password,
-      'confirmpassword':this.repeatPassword
-     }
-      this.addUser(UserInfo);
-    }
-    addUser (UserInfo) {
-      this.http.post('http://localhost:3000/api/login', UserInfo ).subscribe( data => {
-        console.log('register data : ' , data);
-      });
 
-}
+  register() {
+    this.registerAttempted = true;
+    const userInfo = {
+      emailId: this.email,
+      password: this.password,
+    };
+    this.addUser(userInfo);
+  }
+
+  addUser(userInfo) {
+    console.log(userInfo);
+    this.http.post('http://localhost:3000/api/register', userInfo).subscribe(data => {
+      console.log('register data : ', data);
+      this.registerSuccess= true;
+    });
+  }
+
 }
