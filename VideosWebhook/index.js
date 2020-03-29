@@ -34,6 +34,13 @@ server.post('/getVideoDetails', (req, res) => {
 });
 
 
-server.listen((process.env.PORT || 8333), () => {
-  console.log("Server is up and running...");
-});
+//server.listen((process.env.PORT || 8333), () => {
+//console.log("Server is up and running...");
+//});
+const fs = require('fs');
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')
+};
+
+https.createServer(options,server).listen(8333);
