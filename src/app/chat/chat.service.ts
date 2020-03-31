@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {BehaviorSubject} from 'rxjs';
 import {ApiAiClient} from 'api-ai-javascript/es6/ApiAiClient';
+import {delay} from 'rxjs/operators';
 
 
 @Injectable({
@@ -9,7 +10,8 @@ import {ApiAiClient} from 'api-ai-javascript/es6/ApiAiClient';
 })
 
 export class Message {
-  constructor(public content: string, public sentBy: string) {}
+  constructor(public content: string, public sentBy: string) {
+  }
 }
 
 export class ChatService {
@@ -29,6 +31,7 @@ export class ChatService {
     this.update(userMessage);
     return this.client.textRequest(msg)
       .then(res => {
+        console.log(res);
         const speech = res.result.fulfillment.speech;
         const botMessage = new Message(speech, 'bot');
         this.update(botMessage);

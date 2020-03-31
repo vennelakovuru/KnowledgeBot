@@ -1,16 +1,18 @@
-<form class="modal-content" #form="ngForm" (ngSubmit)="Submit()">
-    <h1>Login</h1>
+<form class="card" #form="ngForm">
 
-    <label for="email"><b>Email</b></label>
-    <input type="email" placeholder="Enter Email" [(ngModel)]="email" name="email" required>
+  <h1>Sign in</h1>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" [(ngModel)]="password" name="psw" required>
+  <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
 
-    <button type="button" class="btn btn-primary" [disabled]="form.invalid" (click)="login()">Submit</button>
-    <h5>Don't have an account? Please <a routerLink='/register'>register</a></h5>
-    <div *ngIf="loginattempted && showerrmsg" style="color: red"> Invalid Email or Password !</div>
-  </form>
+  <input type="password" placeholder="Password" [(ngModel)]="password" name="psw" required>
+
+  <button type="button" [disabled]="form.invalid" (click)="login()">Sign in</button>
+
+</form>
+<form class="card">
+  <h5>Don't have an account?<a routerLink='/register'>Create an account</a></h5>
+  <div *ngIf="loginattempted && showerrmsg" style="color: red"> Invalid Email or Password!</div>
+</form>
 
 
 

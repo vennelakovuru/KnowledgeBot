@@ -6,9 +6,14 @@ export const environment = {
   production: false,
 
   dialogflow: {
-    knowledgeBot: "a02c8c7fcb1f452a90d53a6871982540"
+    knowledgeBot: 'a02c8c7fcb1f452a90d53a6871982540'
+  },
+
+  youtube: {
+    api_key: 'AIzaSyDhGASYUnmjszNIjzQ2Pr58YNc7xekWxWg'
   }
-};
+}
+;
 
 /*
  * For easier debugging in development mode, you can import the following file

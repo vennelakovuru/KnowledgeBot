@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
     console.log(userInfo);
     this.http.post('http://localhost:3000/api/register', userInfo).subscribe(data => {
       console.log('register data : ', data);
-      this.registerSuccess= true;
+      this.registerSuccess = true;
     });
   }
 

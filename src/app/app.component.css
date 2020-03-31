@@ -1,14 +1,21 @@
-.container {
-  padding-top: 3em;
-  padding-bottom: 3em;
-  padding-left: 5em;
-}
-
 nav{
-  background-color: cornflowerblue;
+  padding: 10px;
 }
 
-h1 {
-  color: blue;
+a{
+  font-size: 18px;
   font-weight: bolder;
+  font-family: Akzidenz;
 }
+
+button{
+  font-size: 18px;
+  font-family: Akzidenz;
+  color: white;
+}
+
+.container{
+  padding: 30px;
+}
+
+

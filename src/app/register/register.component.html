@@ -1,24 +1,20 @@
-<form class="modal-content" #form="ngForm" (ngSubmit)="signup()">
+<form class="card" #form="ngForm">
 
   <h1>Sign Up</h1>
-  <p>Please fill in this form to create an account.</p>
-  <label for="email"><b>Email</b></label>
-  <input type="email" placeholder="Enter Email" [(ngModel)]="email" name="email" required>
 
-  <label for="psw"><b>Password</b></label>
-  <input type="password" placeholder="Enter Password" [(ngModel)]="password" name="psw" required>
+  <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
 
-  <label for="psw-repeat"><b>Confirm Password</b></label>
-  <input type="password" placeholder="Repeat Password" [(ngModel)]="repeatPassword" name="psw-repeat" required>
+  <input type="password" placeholder="Password" [(ngModel)]="password" name="psw" required>
 
-  <div class="clearfix">
-    <button type="submit" (click)="register()" [disabled]="form.invalid" class="btn btn-success" class="btn btn-primary">Sign Up</button>
-    </div>
+  <input type="password" placeholder="Confirm Password" [(ngModel)]="repeatPassword"
+         name="psw-repeat" required>
 
-  <div *ngIf="registerAttempted && registerSuccess" style="color: green"> Registered successfully ! Please <a
-    routerLink='/login'>login here</a>
-  </div>
+  <button type="submit"  (click)="register()" [disabled]="form.invalid">Sign Up</button>
 
+</form>
+
+<form class="card" *ngIf="registerAttempted && registerSuccess">
+  <h5>Registered successfully ! Click <a routerLink='/login'> here </a>to Sign in</h5>
 </form>
 
 

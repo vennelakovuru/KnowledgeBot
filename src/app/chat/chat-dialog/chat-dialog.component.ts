@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ChatService, Message} from '../chat.service';
-import { Observable } from 'rxjs';
+import {Observable} from 'rxjs';
 import {scan} from 'rxjs/operators';
 
 @Component({
@@ -16,7 +16,8 @@ export class ChatDialogComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.messages = this.chat.conversation.asObservable().pipe(scan((acc, val) => acc.concat(val) ));
+    this.messages = this.chat.conversation.asObservable().pipe(scan((acc, val) => acc.concat(val)));
+    console.log(this.messages);
   }
 
   sendMessage() {

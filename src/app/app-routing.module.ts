@@ -6,7 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import {ChatDialogComponent} from './chat/chat-dialog/chat-dialog.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: '', pathMatch: 'full' },
   {
     path: 'login',
     component: LoginComponent
