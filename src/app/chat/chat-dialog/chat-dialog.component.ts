@@ -11,21 +11,23 @@ import {scan} from 'rxjs/operators';
 export class ChatDialogComponent implements OnInit {
   messages: Observable<Message[]>;
   formValue: string;
+  res: any;
 
   constructor(public chat: ChatService) {
   }
 
   ngOnInit() {
     this.messages = this.chat.conversation.asObservable().pipe(scan((acc, val) => acc.concat(val)));
-    console.log(this.messages);
   }
 
   sendMessage() {
+    console.log('hello');
     this.chat.converse(this.formValue);
     const topPos = document.querySelector('#card-body').scrollHeight;
     console.log(topPos);
     this.formValue = '';
     document.getElementById('card-body').scrollTop = topPos;
+
   }
 
 }
