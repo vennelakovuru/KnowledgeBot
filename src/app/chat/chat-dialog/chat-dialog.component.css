@@ -1,31 +1,32 @@
 .from{
-  background-color: whitesmoke;
+  background-color: ghostwhite;
   border-radius: 3px;
   padding-top: 2%;
   font-style: italic;
   font-size: 16px;
-  margin-right: 3%;
+  margin-right: 12%;
 
 }
 
 .to{
   padding-top: 2%;
-  background-color: lightseagreen;
+  background-color: deepskyblue;
   text-align: right;
-  margin-left: 3%;
+  margin-left: 12%;
   border-radius: 3px;
   font-style: italic;
   font-size: 16px;
 }
 
 .card-header{
-  background-color: #f9764b;
+  background-color: deepskyblue;
   font-weight: bold;
   font-size: larger;
 }
 
 .card-body{
-  background-color: paleturquoise;
+  background-color: red;
+  background-image: linear-gradient(skyblue, white);
   height: 300px;
   overflow: auto;
 }
