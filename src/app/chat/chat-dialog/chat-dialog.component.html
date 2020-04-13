@@ -1,4 +1,4 @@
-
+<div class = "container col-4 float-right">
   <div class="card">
     <div class="card-header">
       <h2>Chat</h2>
@@ -8,9 +8,9 @@
       <div *ngIf="message.sentBy === 'bot' && message.content.length === 3; else elseBlock" class="alert" [ngClass]="{ 'from': message.sentBy === 'bot',
                                       'to': message.sentBy === 'user' }">
         <p> Here are some video links !!</p>
-        <a href={{message.content[0]}}>{{message.content[0]}}</a><br>
-        <a href={{message.content[1]}}>{{message.content[1]}}</a><br>
-        <a href={{message.content[2]}}>{{message.content[2]}}</a>
+        <a href={{message.content[0]}} target="_blank">{{message.content[0]}}</a><br>
+        <a href={{message.content[1]}} target="_blank">{{message.content[1]}}</a><br>
+        <a href={{message.content[2]}} target="_blank">{{message.content[2]}}</a>
       </div>
       <ng-template #elseBlock>
         <div class="alert" [ngClass]="{ 'from': message.sentBy === 'bot',
@@ -22,7 +22,4 @@
     </div>
       <input type="text" placeholder="your message here" [(ngModel)]="formValue" (keyup.enter)="sendMessage()">
   </div>
-
-
-
-
+</div>

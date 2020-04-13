@@ -4,9 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {ChatDialogComponent} from './chat/chat-dialog/chat-dialog.component';
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'login',
     component: LoginComponent
@@ -17,8 +18,12 @@ const routes: Routes = [
   },
   {
     path: 'knowledgebot',
-    component: ChatDialogComponent
+    component: HomeComponent
   }
+  // {
+  //   path: 'chat',
+  //   component: ChatDialogComponent
+  // }
 
 ];
 

@@ -1,3 +1,8 @@
+<nav class="navbar justify-content-end">
+  <button class="btn-success" [routerLink]="['/login']">Sign in</button>
+</nav>
+
+<div class ="container col-3">
 <form class="card" #form="ngForm">
 
   <h1>Sign Up</h1>
@@ -16,5 +21,5 @@
 <form class="card" *ngIf="registerAttempted && registerSuccess">
   <h5>Registered successfully ! Click <a routerLink='/login'> here </a>to Sign in</h5>
 </form>
-
+</div>
 

@@ -1,5 +1,9 @@
-button{
+#chatbutton{
   position: fixed;
-  bottom: 10%;
+  bottom: 6%;
   right: 3%;
+}
+
+h1{
+  font-family: "Comic Sans MS";
 }

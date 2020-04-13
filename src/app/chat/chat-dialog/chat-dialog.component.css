@@ -1,18 +1,18 @@
 .from{
   background-color: whitesmoke;
   border-radius: 3px;
-  padding-top: 18px;
+  padding-top: 2%;
   font-style: italic;
   font-size: 16px;
-  margin-right: 80px;
+  margin-right: 3%;
 
 }
 
 .to{
-  padding-top: 18px;
+  padding-top: 2%;
   background-color: lightseagreen;
   text-align: right;
-  margin-left: 80px;
+  margin-left: 3%;
   border-radius: 3px;
   font-style: italic;
   font-size: 16px;
@@ -25,14 +25,19 @@
 }
 
 .card-body{
-  overflow:auto;
   background-color: paleturquoise;
-  height: 30em;
+  height: 300px;
+  overflow: auto;
 }
 
 .card{
   border: 2px solid #888;
+  position: fixed;
+  bottom: 6%;
+  width: 25%;
+  right: 3%;
 }
+
 
 input {
   padding: 1em;
