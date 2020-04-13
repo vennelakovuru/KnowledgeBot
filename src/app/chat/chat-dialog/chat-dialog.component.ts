@@ -2,10 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {ChatService, Message} from '../chat.service';
 import {Observable} from 'rxjs';
 import {scan} from 'rxjs/operators';
+import {DomSanitizer} from '@angular/platform-browser';
+
+
 
 @Component({
   selector: 'app-chat-dialog',
-  templateUrl: './chat-dialog.component.html',
+  templateUrl: './chat-dialog.component.html' ,
   styleUrls: ['./chat-dialog.component.css']
 })
 export class ChatDialogComponent implements OnInit {
@@ -13,7 +16,7 @@ export class ChatDialogComponent implements OnInit {
   formValue: string;
   res: any;
 
-  constructor(public chat: ChatService) {
+  constructor(public chat: ChatService, private sanitizer: DomSanitizer) {
   }
 
   ngOnInit() {
@@ -21,13 +24,14 @@ export class ChatDialogComponent implements OnInit {
   }
 
   sendMessage() {
-    console.log('hello');
     this.chat.converse(this.formValue);
     const topPos = document.querySelector('#card-body').scrollHeight;
-    console.log(topPos);
     this.formValue = '';
     document.getElementById('card-body').scrollTop = topPos;
+  }
 
+  sanitizeVideo(value){
+    return this.sanitizer.bypassSecurityTrustResourceUrl(value);
   }
 
 }

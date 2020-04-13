@@ -8,12 +8,12 @@
       <div *ngIf="message.sentBy === 'bot' && message.content.length === 3; else elseBlock" class="alert" [ngClass]="{ 'from': message.sentBy === 'bot',
                                       'to': message.sentBy === 'user' }">
         <p> Here are some video links !!</p>
-        <a href={{message.content[0]}} target="_blank">{{message.content[0]}}</a><br>
-        <a href={{message.content[1]}} target="_blank">{{message.content[1]}}</a><br>
-        <a href={{message.content[2]}} target="_blank">{{message.content[2]}}</a>
+        <iframe width="230" height="140" [src]="sanitizeVideo(message.content[0])"></iframe>
+        <iframe width="230" height="140" [src]="sanitizeVideo(message.content[1])"></iframe>
+        <iframe width="230" height="140" [src]="sanitizeVideo(message.content[2])"></iframe>
       </div>
       <ng-template #elseBlock>
-        <div class="alert" [ngClass]="{ 'from': message.sentBy === 'bot',
+        <div class="alert" id="element" [ngClass]="{ 'from': message.sentBy === 'bot',
                                       'to': message.sentBy === 'user' }">
           {{message.content}}
         </div>

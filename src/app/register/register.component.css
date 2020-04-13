@@ -1,7 +1,7 @@
 /* Full-width input fields */
 input{
-  padding: 9px;
-  margin: 6px;
+  padding: 12px;
+  margin: 9px;
   border-radius: 3px;
   display: inline-block;
   border: none;
@@ -10,8 +10,8 @@ input{
 
 /* Set a style for all buttons */
 button {
-  padding: 9px;
-  margin: 6px;
+  padding: 12px;
+  margin: 9px;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -20,8 +20,9 @@ button {
   border: 1px solid #888;
   border-radius: 6px;
   padding: 30px 5px 10px;
-  background-color: #f9764b;
+  background: linear-gradient(deepskyblue, lightsalmon);
   margin-bottom: 10px;
+  margin-top: 20%;
 }
 
 h1{
@@ -33,6 +34,7 @@ h1{
 
 h5{
   text-align: center;
+  margin-top: 9px;
 }
 
 button:disabled {
@@ -40,3 +42,35 @@ button:disabled {
   pointer-events: all !important;
 }
 
+.container{
+  margin-right: 10%;
+}
+
+nav{
+  background: linear-gradient(skyblue,white);
+}
+
+button{
+  font-size: 20px;
+  font-family: Akzidenz;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.title{
+  font-family: "Comic Sans MS";
+  font-size: 30px;
+  animation: text 3s linear;
+}
+
+@keyframes text {
+  0%{
+    color: black;
+  }
+  30%{
+    letter-spacing: 25px;
+  }
+  85%{
+    letter-spacing: 8px;
+  }
+}

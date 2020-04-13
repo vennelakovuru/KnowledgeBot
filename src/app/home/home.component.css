@@ -4,6 +4,25 @@
   right: 3%;
 }
 
-h1{
+nav{
+  background: linear-gradient(skyblue,white);
+}
+.title{
   font-family: "Comic Sans MS";
+  font-size: 30px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  animation: text 3s linear;
+}
+
+@keyframes text {
+  0%{
+    color: black;
+  }
+  30%{
+    letter-spacing: 25px;
+  }
+  85%{
+    letter-spacing: 8px;
+  }
 }

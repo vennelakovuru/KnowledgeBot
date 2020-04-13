@@ -1,11 +1,17 @@
-<div>
-  <h1>Knowledge Bot</h1>
-</div>
-<nav class="navbar navbar-light bg-primary">
-  <span class="h1">Navbar</span>
+<nav class="navbar">
+  <div class="title">Knowledge Bot</div>
 </nav>
-
-<div class="container col-4 float-right">
-  <button class="btn-primary btn-lg" id="chatbutton" (click)="openChatBot()">Chat</button>
-  <app-chat-dialog *ngIf="loadComponent"></app-chat-dialog>
+<!--<div class="col-md-8">-->
+<!--    <ng-container *ngFor="let message of messages | async">-->
+<!--      <div *ngIf="message.sentBy === 'bot' && message.content.length === 3;" class="alert" [ngClass]="{ 'from': message.sentBy === 'bot',-->
+<!--                                      'to': message.sentBy === 'user' }">-->
+<!--            <iframe width="425" height="400" [src]="sanitizeVideo(message.content[0])"></iframe>-->
+<!--            <iframe width="400" height="200" [src]="sanitizeVideo(message.content[1])"></iframe>-->
+<!--            <iframe width="400" height="200" [src]="sanitizeVideo(message.content[2])"></iframe>-->
+<!--      </div>-->
+<!--    </ng-container>-->
+<!--</div>-->
+<div class="col-md-4 float-right">
+    <button class="btn-primary btn-lg" id="chatbutton" (click)="openChatBot()">Chat</button>
+    <app-chat-dialog *ngIf="loadComponent"></app-chat-dialog>
 </div>

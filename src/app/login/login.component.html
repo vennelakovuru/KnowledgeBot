@@ -1,23 +1,20 @@
-<nav class="navbar justify-content-end">
-  <button class="btn-success" [routerLink]="['/register']">Sign up</button>
+<nav class="navbar">
+  <div class="title">Knowledge Bot</div>
 </nav>
-
 <div class="container col-3">
-<form class="card" #form="ngForm">
+  <form class="card" #form="ngForm">
 
-  <h1>Sign in</h1>
+    <h1>Sign in</h1>
 
-  <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+    <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
 
-  <input type="password" placeholder="Password" [(ngModel)]="password" name="psw" required>
+    <input type="password" placeholder="Password" [(ngModel)]="password" name="psw" required>
 
-  <button type="button" [disabled]="form.invalid" (click)="login()">Sign in</button>
+    <button type="button" [disabled]="form.invalid" (click)="login()">Sign in</button>
 
-</form>
-<form class="card">
-  <h5>Don't have an account?<a routerLink='/register'>Create an account</a></h5>
-  <div *ngIf="loginattempted && showerrmsg" style="color: red"> Invalid Email or Password!</div>
-</form>
+    <h5>Don't have an account?<a routerLink='/register'>Create an account</a></h5>
+    <div *ngIf="loginattempted && showerrmsg" style="color: red"> Invalid Email or Password!</div>
+  </form>
 </div>
 
 

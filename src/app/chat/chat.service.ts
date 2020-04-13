@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {BehaviorSubject} from 'rxjs';
 import {ApiAiClient} from 'api-ai-javascript/es6/ApiAiClient';
-import {delay} from 'rxjs/operators';
 
 
 @Injectable({
@@ -31,16 +30,13 @@ export class ChatService {
     this.update(userMessage);
     return this.client.textRequest(msg)
       .then(res => {
-        console.log('res', res);
         let speech = res.result.fulfillment.speech;
         const links = res.result.fulfillment;
         if (speech.includes('https')) {
-          console.log('hello');
           speech = speech.split(',');
           // speech = res.result.fulfillment.messages;
         }
         const botMessage = new Message(speech, 'bot');
-        console.log(botMessage);
         this.update(botMessage);
       });
   }

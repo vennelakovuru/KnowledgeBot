@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {ChatService, Message} from '../chat/chat.service';
+import {scan} from 'rxjs/operators';
+import {Observable} from 'rxjs';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +11,10 @@ import {Router} from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  loadComponent = false;
+  loadComponent = true;
+  messages: Observable<Message[]>;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public chat: ChatService, private sanitizer: DomSanitizer) { }
 
   openChatBot() {
      this.loadComponent = true;
@@ -18,9 +23,13 @@ export class HomeComponent implements OnInit {
     //   .catch(console.error);
   }
   ngOnInit() {
+    this.messages = this.chat.conversation.asObservable().pipe(scan((acc, val) => acc.concat(val)));
+    console.log('messages', this.messages);
   }
 
-
-
+  sanitizeVideo(value) {
+    console.log('value', value);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(value);
+  }
 
 }
