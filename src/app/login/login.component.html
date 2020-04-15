@@ -13,6 +13,7 @@
     <button type="button" [disabled]="form.invalid" (click)="login()">Sign in</button>
 
     <h5>Don't have an account?<a routerLink='/register'>Create an account</a></h5>
+    <h5>Click <a routerLink='/home1'>here</a> to go back to the main menu </h5>
     <div *ngIf="loginattempted && showerrmsg" style="color: red"> Invalid Email or Password!</div>
   </form>
 </div>

@@ -1,0 +1,45 @@
+.title{
+    font-family: "Comic Sans MS";
+    font-size: 30px;
+    animation: text 3s linear;
+  }
+
+  nav{
+    background: linear-gradient(skyblue,white);
+  }
+
+  button {
+    padding: 12px;
+    background-color: #008CBA;
+    color: white;
+    margin: 9px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Akzidenz;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+ 
+
+  .container{
+        color: rgb(255, 122, 122);
+        font-family: "Comic Sans MS";
+        margin-right: 0%; 
+        margin-top: 10%;
+  } 
+ 
+  @keyframes text {
+    0%{
+      color: red;
+    }
+    30%{
+      letter-spacing: 25px;
+    }
+    85%{
+      letter-spacing: 8px;
+    }
+  } 
+
+  

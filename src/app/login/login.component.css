@@ -21,7 +21,7 @@ button {
   border-radius: 6px;
   padding: 30px 5px 10px;
   background: linear-gradient(deepskyblue, lightsalmon);
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 h1{
@@ -50,6 +50,10 @@ nav{
   padding-top: 3px;
   padding-bottom: 3px;
   animation: text 3s linear;
+}
+
+.container{
+  margin-right: 15%;
 }
 
 @keyframes text {

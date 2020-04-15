@@ -22,7 +22,11 @@ button {
   padding: 30px 5px 10px;
   background: linear-gradient(deepskyblue, lightsalmon);
   margin-bottom: 10px;
-  margin-top: 20%;
+  margin-top: 40%;
+} 
+
+.container{
+  margin-right: 15%;
 }
 
 h1{
@@ -40,10 +44,6 @@ h5{
 button:disabled {
   cursor: not-allowed;
   pointer-events: all !important;
-}
-
-.container{
-  margin-right: 10%;
 }
 
 nav{

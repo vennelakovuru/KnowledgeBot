@@ -1,9 +1,5 @@
 <nav class="navbar">
   <div class="title">Knowledge Bot</div>
-  <form class="form-inline">
-    <button class="btn mr-sm-2" [routerLink]="['/login']">Sign in</button>
-    <button class="btn btn-outline-dark my-2 mr-sm-0" [routerLink]="['/register']">Sign up</button>
-  </form>
 </nav>
 
 <div class="container col-3 float-right">
@@ -20,9 +16,9 @@
 
     <button type="submit" (click)="register()" [disabled]="form.invalid">Sign Up</button>
 
-    <h5>Registered alredy? <a routerLink='/login'>Sign in here!</a></h5>
+    <h5>Click <a routerLink='/home1'>here</a> to go back to the main menu </h5>
     <div *ngIf="registerAttempted && registerSuccess">
-      <h5>Registered successfully ! Click <a routerLink='/login'> here </a>to Sign in</h5>
+      <h5>Registered successfully ! Click <a routerLink='/login'> here </a>to Sign in</h5> 
     </div>
   </form>
 </div>
