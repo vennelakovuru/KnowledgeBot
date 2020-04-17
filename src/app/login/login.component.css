@@ -14,14 +14,15 @@ button {
   margin: 9px;
   border-radius: 3px;
   cursor: pointer;
-}
+  font-family: Akzidenz
+}  
 
 .card{
   border: 1px solid #888;
   border-radius: 6px;
   padding: 30px 5px 10px;
   background: linear-gradient(deepskyblue, lightsalmon);
-  margin-top: 10%;
+  margin-top: 40%;
 }
 
 h1{
@@ -39,7 +40,7 @@ h5{
 button:disabled {
   cursor: not-allowed;
   pointer-events: all !important;
-}
+} 
 
 nav{
   background: linear-gradient(skyblue,white);
@@ -58,7 +59,7 @@ nav{
 
 @keyframes text {
   0%{
-    color: black;
+    color: red;
   }
   30%{
     letter-spacing: 25px;

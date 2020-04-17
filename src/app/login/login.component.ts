@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
 import {Router} from '@angular/router';
+ 
 
 const apiUrl = '/api';
 
@@ -10,7 +11,9 @@ const apiUrl = '/api';
   styleUrls: ['./login.component.css']
 })
 
+
 export class LoginComponent implements OnInit {
+  
   email: '';
   password = '';
   showerrmsg = false;
@@ -21,6 +24,9 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+    
+    
   }
 
   login() {
