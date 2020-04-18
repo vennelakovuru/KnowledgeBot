@@ -11,7 +11,7 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  loadComponent = true;
+  loadComponent = false;
   messages: Observable<Message[]>;
 
   constructor(private router: Router, public chat: ChatService, private sanitizer: DomSanitizer) { }

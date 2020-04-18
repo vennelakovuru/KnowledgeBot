@@ -8,7 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { ChatModule } from './chat/chat.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-import { Home1Component } from './home1/home1.component';
+import { MainComponent } from './main/main.component';
 import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
@@ -17,7 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms'
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    Home1Component
+    MainComponent
   ],
   imports: [
     BrowserModule,

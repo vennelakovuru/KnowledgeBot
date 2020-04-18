@@ -31,6 +31,8 @@ export class ChatDialogComponent implements OnInit {
   }
 
   sanitizeVideo(value){
+    let i = 0;
+    console.log(i++);
     return this.sanitizer.bypassSecurityTrustResourceUrl(value);
   }
 

@@ -4,9 +4,6 @@
   right: 3%;
 }
 
-nav{
-  background: linear-gradient(skyblue,white);
-}
 .title{
   font-family: "Comic Sans MS";
   font-size: 30px;
@@ -25,4 +22,8 @@ nav{
   85%{
     letter-spacing: 8px;
   }
+}
+
+#menu{
+  background: linear-gradient(skyblue,white);
 }
