@@ -37,6 +37,7 @@ export class ChatService {
           // speech = res.result.fulfillment.messages;
         }
         const botMessage = new Message(speech, 'bot');
+        console.log(botMessage);
         this.update(botMessage);
       });
   }

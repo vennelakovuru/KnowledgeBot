@@ -9,7 +9,7 @@ import { ChatModule } from './chat/chat.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

@@ -32,7 +32,7 @@
 
 .card-body{
   /*background-image: linear-gradient(skyblue, white);*/
-  height: 360px;
+  height: 400px;
   overflow: auto;
 }
 
@@ -40,7 +40,7 @@
   border: 2px solid #888;
   position: fixed;
   bottom: 6%;
-  width: 25%;
+  width: 46%;
   right: 3%;
 }
 
