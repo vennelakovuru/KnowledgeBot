@@ -6,36 +6,25 @@
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
   <h1>Sign Up</h1> 
 
-
-    <input type="email" placeholder="Email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+    <input type="email" placeholder="Email" formControlName="email" class="form-control" [(ngModel)]="emailId" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
         <div *ngIf="f.email.errors.required">Email is required</div>
         <div *ngIf="f.email.errors.email"> Email must be a valid email address </div>
     </div>
-    <input type="password" placeholder="Password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+    <input type="password" placeholder="Password" formControlName="password" [(ngModel)]="password"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
     <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
         <div *ngIf="f.password.errors.required">Password is required</div>
         <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
     </div>
 
-    <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+    <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" [(ngModel)]="repeatpassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
     <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
         <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
         <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
     </div>
     
-  
-    <button type="submit"  (click)="register()"> Sign Up </button> 
-    
-
-    <h5>Click <a routerLink='/home1'>here</a> to go back to the main menu </h5>
-    
-    
-    <div *ngIf="registerAttempted && registerSuccess">
-      <h5>Registered successfully ! Click <a routerLink='/login'> here </a>to Sign in</h5> 
-    </div> 
-
+    <button type="submit"> Sign Up </button> 
+    <h5>Click <a routerLink='/main'>here</a> to go back to the main menu </h5>
 
   </form>
-  
 </div>

@@ -1,42 +1,46 @@
 .title{
-    font-family: "Comic Sans MS";
-    font-size: 30px;
-    animation: text 3s linear;
+  font-family: "Comic Sans MS";
+  font-size: 30px;
+  animation: text 3s linear;
+}
+
+nav{
+  background: linear-gradient(skyblue,white);
+}
+
+button {
+  background-color: #008CBA;
+  color: white;
+  margin: 9px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Akzidenz;
+  padding: 0 12px;
+}
+
+h1 {
+
+font-size: 40px;
+font-family: Akzidenz;
+
+} 
+.container{
+      color: lemonchiffon;
+      font-family: Akzidenz;
+      margin-right: 0%;
+      margin-top: 10%;
+}
+
+@keyframes text {
+  0%{
+    color: red;
   }
-
-  nav{
-    background: linear-gradient(skyblue,white);
+  30%{
+    letter-spacing: 25px;
   }
-
-  button {
-    background-color: #008CBA;
-    color: white;
-    margin: 9px;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 20px;
-    font-family: Akzidenz;
-    padding: 0 12px;
+  85%{
+    letter-spacing: 8px;
   }
-
-
-
-  .container{
-        color: rgb(255, 122, 122);
-        font-family: "Comic Sans MS";
-        margin-right: 0%;
-        margin-top: 10%;
-  }
-
-  @keyframes text {
-    0%{
-      color: red;
-    }
-    30%{
-      letter-spacing: 25px;
-    }
-    85%{
-      letter-spacing: 8px;
-    }
-  }
+}
 
