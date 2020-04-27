@@ -1,6 +1,3 @@
-<nav class="navbar">
-  <div class="title">Knowledge Bot</div>
-</nav>
 <nav class="navbar" id="menu">
   <ul class="navbar-nav">
     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -43,7 +40,4 @@
 <!--      </div>-->
 <!--    </ng-container>-->
 <!--</div>-->
-<div class="col-md-6 float-right">
-    <button class="btn-primary btn-lg" id="chatbutton" (click)="openChatBot()">Chat</button>
-    <app-chat-dialog *ngIf="loadComponent"></app-chat-dialog>
-</div>
+<app-chat-dialog></app-chat-dialog>

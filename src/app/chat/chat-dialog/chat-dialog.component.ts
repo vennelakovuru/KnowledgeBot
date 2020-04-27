@@ -8,13 +8,15 @@ import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-chat-dialog',
-  templateUrl: './chat-dialog.component.html' ,
+  templateUrl: './chat-dialog.component.html',
   styleUrls: ['./chat-dialog.component.css']
 })
 export class ChatDialogComponent implements OnInit {
   messages: Observable<Message[]>;
   formValue: string;
   res: any;
+  showVideos = false;
+  showLinks = false;
 
   constructor(public chat: ChatService, private sanitizer: DomSanitizer) {
   }
@@ -30,8 +32,16 @@ export class ChatDialogComponent implements OnInit {
     document.getElementById('card-body').scrollTop = topPos;
   }
 
-  sanitizeVideo(value){
-    return this.sanitizer.bypassSecurityTrustResourceUrl(value);
+  sanitizeVideo(val) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(val);
+  }
+
+  showVideo() {
+    this.showVideos = true;
+  }
+
+  showLink() {
+    this.showLinks = true;
   }
 
 }

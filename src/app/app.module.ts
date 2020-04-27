@@ -10,6 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatLinkPreviewModule } from '@angular-material-extensions/link-preview';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgxLinkPreviewModule} from 'ngx-link-preview';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     ChatModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatLinkPreviewModule.forRoot(),
+    BrowserAnimationsModule,
+    NgxLinkPreviewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

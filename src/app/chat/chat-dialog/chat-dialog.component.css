@@ -30,18 +30,18 @@
   font-size: larger;
 }
 
-.card-body{
+#card-body{
   /*background-image: linear-gradient(skyblue, white);*/
-  height: 400px;
+  height: 490px;
   overflow: auto;
 }
 
-.card{
+#card{
   border: 2px solid #888;
   position: fixed;
-  bottom: 6%;
-  width: 46%;
-  right: 3%;
+  bottom: 0%;
+  width: 49%;
+  right: 2%;
 }
 
 
@@ -51,10 +51,25 @@ input {
   background: #f1f1f1;
 }
 
-/* Set a style for all buttons */
-button {
-  padding: 1em;
-  background-color: #f9764b;
-  cursor: pointer;
+button{
+  border-radius: 3px;
+  margin: 10px;
 }
+
+img{
+  width: 300px;
+  height: 109px;
+}
+
+.media-body{
+}
+
+.card2{
+  background-color: tomato;
+}
+
+.card-body2{
+  background-color: #c7eafc;
+}
+
 

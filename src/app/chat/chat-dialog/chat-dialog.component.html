@@ -1,29 +1,74 @@
-<div class = "container col-4 float-right">
-  <div class="card">
+<div class="container col-4 float-right">
+  <div class="card" id="card">
     <div class="card-header">
       <h2>Chat</h2>
     </div>
     <div class="card-body" id="card-body">
-    <ng-container *ngFor="let message of messages | async">
-      <div *ngIf="message.sentBy === 'bot' && message.content.length === 6; else elseBlock" class="alert" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                      'to': message.sentBy === 'user' }">
-        <p>Here are some links to check</p>
-        <a href={{message.content[0]}} target="_blank">{{message.content[0]}}</a><br>
-        <a href={{message.content[1]}} target="_blank">{{message.content[1]}}</a><br>
-        <a href={{message.content[2]}} target="_blank">{{message.content[2]}}</a>
-        <p> Here are some video links !!</p>
-        <iframe width="360" height="190" [src]="sanitizeVideo(message.content[3])" allowfullscreen></iframe>
-        <iframe width="360" height="190" [src]="sanitizeVideo(message.content[4])" allowfullscreen></iframe>
-        <iframe width="360" height="190" [src]="sanitizeVideo(message.content[5])" allowfullscreen></iframe>
-      </div>
-      <ng-template #elseBlock>
-        <div class="alert" id="element" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                      'to': message.sentBy === 'user' }">
-          {{message.content}}
+      <ng-container *ngFor="let message of messages | async">
+        <div *ngIf="message.sentBy === 'bot' && message.content.length === 18; else elseBlock" class="alert">
+        <span>
+        <button class="btn-outline-success" ng-click="showVideo">Videos</button>
+        <button class="btn-outline-success" ng-click="showLink">Links</button>
+          </span>
+          <div ng-show="showVideo">
+            <div class="media position-relative border-dark">
+              <img src='../../../assets/image.png' class="col-4">
+              <div class="media-body border-dark">
+                <h4 class="mt-0">{{message.content[1]}}</h4>
+                <p>{{message.content[2]}}</p>
+                <a href={{message.content[0]}} target="_blank" class="stretched-link">{{message.content[0]}}</a>
+              </div>
+            </div>
+            <div class="media position-relative border-info">
+              <img src='../../../assets/image.png' class="col-4">
+              <div class="media-body border-info">
+                <h4 class="mt-0">{{message.content[4]}}</h4>
+                <p>{{message.content[5]}}</p>
+                <a href={{message.content[3]}} target="_blank" class="stretched-link">{{message.content[3]}}</a>
+              </div>
+            </div>
+            <div class="media position-relative border-secondary">
+              <img src='../../../assets/image.png' class="col-4">
+              <div class="media-body border-secondary">
+                <h4 class="mt-0">{{message.content[7]}}</h4>
+                <p>{{message.content[8]}}</p>
+                <a href={{message.content[6]}} target="_blank" class="stretched-link">{{message.content[6]}}</a>
+              </div>
+            </div>
+
+          </div>
+          <div ng-show="showVideo">
+            <div class="card card2"  style="width: 343px;">
+              <iframe width="343" height="190" [src]="sanitizeVideo(message.content[9])" allowfullscreen></iframe>
+              <div class="card-body card-body2">
+                <h5 class="card-title">{{message.content[12]}}</h5>
+                <p class="card-text">{{message.content[15]}}</p>
+              </div>
+            </div>
+            <div class="card card2"  style="width: 343px;">
+              <iframe width="343" height="190" [src]="sanitizeVideo(message.content[10])" allowfullscreen></iframe>
+              <div class="card-body card-body2">
+                <h5 class="card-title">{{message.content[13]}}</h5>
+                <p class="card-text">{{message.content[16]}}</p>
+              </div>
+            </div>
+            <div class="card card2" style="width: 343px;">
+              <iframe width="343" height="190" [src]="sanitizeVideo(message.content[11])" allowfullscreen></iframe>
+              <div class="card-body card-body2">
+                <h5 class="card-title">{{message.content[14]}}</h5>
+                <p class="card-text">{{message.content[17]}}</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </ng-template>
-    </ng-container>
+        <ng-template #elseBlock>
+          <div class="alert" id="element" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to': message.sentBy === 'user' }">
+            {{message.content}}
+          </div>
+        </ng-template>
+      </ng-container>
     </div>
-      <input type="text" placeholder="your message here" [(ngModel)]="formValue" (keyup.enter)="sendMessage()">
+    <input type="text" placeholder="your message here" [(ngModel)]="formValue" (keyup.enter)="sendMessage()">
   </div>
 </div>
