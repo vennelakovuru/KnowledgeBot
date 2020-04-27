@@ -1,17 +1,58 @@
-#chatbutton{
-  position: fixed;
-  bottom: 6%;
-  right: 3%;
+#chatbutton {
+    position: fixed;
+    bottom: 6%;
+    right: 3%;
 }
 
-.title{
-  font-family: "Comic Sans MS";
-  font-size: 30px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  animation: text 3s linear;
+.title {
+    font-family: "Comic Sans MS";
+    font-size: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    animation: text 3s linear;
 }
 
-#menu{
-  background: linear-gradient(skyblue,white);
+#menu {
+    background: linear-gradient(skyblue, white);
+}
+
+.mega-menu {
+    width: 700px;
+    overflow: hidden;
+    padding: 10px;
+    background: linear-gradient(skyblue, white);
+}
+
+.mega-menu2 {
+    width: 700px;
+    overflow: hidden;
+    padding: 10px;
+    background: linear-gradient(skyblue, white);
+}
+
+.mega-menu3 {
+    width: 700px;
+    overflow: hidden;
+    padding: 10px;
+    background: linear-gradient(skyblue, white);
+}
+
+.mega-menu4 {
+    width: 500px;
+    overflow: hidden;
+    padding: 10px;
+    background: linear-gradient(skyblue, white);
+}
+
+.navbar-expand-sm {
+    background: linear-gradient(skyblue, white);
+}
+
+a {
+    color: #0b50a0;
+}
+
+.dropdown-toggle:active {
+    background-color: white;
+    cursor: pointer;
 }
