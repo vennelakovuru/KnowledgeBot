@@ -13,6 +13,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatLinkPreviewModule } from '@angular-material-extensions/link-preview';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxLinkPreviewModule} from 'ngx-link-preview';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NgwWowModule } from 'ngx-wow';
+
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import {NgxLinkPreviewModule} from 'ngx-link-preview';
     ReactiveFormsModule,
     MatLinkPreviewModule.forRoot(),
     BrowserAnimationsModule,
-    NgxLinkPreviewModule
+    NgxLinkPreviewModule,
+    NgwWowModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,30 +1,83 @@
-<nav class="navbar">
-  <div class="title">Knowledge Bot</div>
-</nav>
-<div class="container col-3">
-  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
-    <h1>Sign in</h1>
+<!--Main Navigation-->
+<header class="intro-header">
 
-    <input type="email" placeholder="Email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-        <div *ngIf="f.email.errors.required">Email is required</div>
-        <div *ngIf="f.email.errors.email"> Email must be a valid email address </div>
+
+  <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://www.elsetge.cat/myimg/f/205-2059093_white-petaled-flower-book-tulips-coffee-hd-wallpaper.jpg);">
+    <div class="full-bg-img mask rgba-black-light">
+
+
+
+  <!--Intro Section-->
+  <section class="view intro-2">
+    <div class="full-bg-img mask rgba-gradient">
+      <div class="container flex-center">
+        <div class="d-flex align-items-center content-height w-100">
+          <div class="row flex-center pt-5 mt-3 w-100">
+            <div class="col-md-6 text-center text-md-left mb-5">
+              <div class="white-text">
+                <h1 class="h1" data-wow-delay="0.3s">Sign in right
+                  now! <br> <br>
+              
+                  Ask Anything Anytime. I'm here to help you :)  </h1>
+               
+                   
+              </div>
+            </div>
+            <div class="col-md-6 text-center text-md-left mb-5">
+              <!--Form-->
+              <mdb-card class="wow fadeInRight" data-wow-delay="0.3s">
+                <mdb-card-body>
+                  <!--Header-->
+                  <div class="text-center">
+                    <h2 class="white-text">
+                      <mdb-icon fas icon="user" class="text-white"></mdb-icon> Login</h2>
+                    <hr class="hr-light">
+                  </div>
+                  <!--Body-->
+                  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <div class="md-form">
+                    
+                    <i class="fas fa-envelope prefix white-text active"></i>
+                    <input type="text"  id="form3" formControlName="email" class="form-control" [(ngModel)]="emailId" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" class="text-white form-control" mdbInput>
+                    <label for="form3" class="text-white">Email</label>
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">Email is required</div>
+                      <div *ngIf="f.email.errors.email"> Email must be a valid email address </div>
+                  </div>
+                  </div>
+
+                
+                  <div class="md-form">
+                    <i class="fas fa-lock prefix white-text active"></i>
+                    <input type="password"  id="form2" formControlName="password" [(ngModel)]="password"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" class="text-white form-control" mdbInput>
+                    <label for="form2" class="text-white">Password</label>
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">Password is required</div>
+                      <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                  </div>
+                  </div>
+
+                  <div class="text-center mt-4">
+                    <button mdbBtn color="pink" mdbWavesEffect>Login</button>
+                  </div>
+
+                  <div class="text-center mt-4 white-text">
+                  <h3>Don't have an account?<a routerLink='/register'>Create an account</a></h3>
+                 <h3>Click <a routerLink='/main'>here</a> to go back to the main menu </h3>
+                 <div *ngIf="loginattempted && showerrmsg" style="color: red"> Invalid Email or Password!</div>
+               </div>
+                </form>
+                </mdb-card-body>
+              </mdb-card>
+              <!--/.Form-->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <input type="password" placeholder="Password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-        <div *ngIf="f.password.errors.required">Password is required</div>
-        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-    </div>
-
-    <button type="submit"  (click)="register()"> Login </button>
-
-    <h5>Don't have an account?<a routerLink='/register'>Create an account</a></h5>
-    <h5>Click <a routerLink='/home1'>here</a> to go back to the main menu </h5>
-    <div *ngIf="loginattempted && showerrmsg" style="color: red"> Invalid Email or Password!</div>
-  </form>
+  </section>
 </div>
-
-
-
-
+  </div>
+</header>
+<!--Main Navigation-->

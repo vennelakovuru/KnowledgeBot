@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {ModalDirective} from 'angular-bootstrap-md';
+
 
 @Component({
   selector: 'app-home1',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild(ModalDirective, {static: false}) modal: ModalDirective;
+  name: string = '';
+  timeInput = new FormControl();
+  subjectInput = new FormControl();
+  locationInput = new FormControl();
+  descriptionInput = new FormControl();
+  
+ constructor() { }
 
   ngOnInit() {
+   
   }
 
+
 }
+
+

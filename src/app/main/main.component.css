@@ -1,42 +1,39 @@
-.title{
-    font-family: "Comic Sans MS";
-    font-size: 30px;
-    animation: text 3s linear;
-  }
+button{
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: Akzidenz;
+}
 
-  nav{
-    background: linear-gradient(skyblue,white);
-  }
+.view {
+  height: 750px;
+  width: 1550px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  button {
-    background-color: #008CBA;
-    color: white;
-    margin: 9px;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 20px;
-    font-family: Akzidenz;
-    padding: 0 12px;
-  }
+.h1
+{
+  color: blanchedalmond;
+}
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
 
 
-
-  .container{
-        color: rgb(255, 122, 122);
-        font-family: "Comic Sans MS";
-        margin-right: 0%;
-        margin-top: 10%;
-  }
-
-  @keyframes text {
-    0%{
-      color: red;
-    }
-    30%{
-      letter-spacing: 25px;
-    }
-    85%{
-      letter-spacing: 8px;
-    }
-  }
+h2 {
+  letter-spacing: 1px;
+  font-size: 40px;
+  font-family: Akzidenz;
+  
+}
+h5 {
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-family: Akzidenz;
+  
+}
+.hr-light {
+  width: 400px;
+}
 

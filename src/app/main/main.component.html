@@ -1,17 +1,26 @@
-<nav class="navbar">
-    <div class="title">Knowledge Bot</div>
-    <form class="form-inline">
-      <button class="btn btn-outline-dark my-2 mr-sm-0" [routerLink]="['/login']">Sign in</button>
-      <button class="btn btn-outline-dark my-2 mr-sm-0" [routerLink]="['/register']">Sign up</button>
-    </form>
-  </nav>
-
-  <div class="container col-6 float-right">
-   <h1>Hello Friend Iam Knowledge Bot...!! <br>
-<br>
-Want to explore knowledge? Ask me anything, anytime...
-
-<br>
-<br>
-I'm here to help you :) </h1>
+<!--Main Navigation-->
+<header class="intro-header">
+  <!-- Intro Section -->
+  <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://www.elsetge.cat/myimg/f/205-2059093_white-petaled-flower-book-tulips-coffee-hd-wallpaper.jpg);">
+    <div class="full-bg-img mask rgba-black-light">
+      <div class="container flex-center">
+        <div class="row pt-5 mt-3 w-100">
+          <div class="col-md-12">
+            <div class="text-center"> 
+              <h2 class="pink-text"><i class="fas fa-chalkboard-teacher"></i> <b> Knowledge Bot </b></h2>
+              <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
+              <h5 class="font-up mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>
+                A platform to seamlessly seek Knowledge.<br> 
+                <br>Unleash your growth with a conversation </strong></h5>
+                <button mdbBtn  type="button" color="pink" rounded="true" [routerLink]="['/login']" mdbWavesEffect>Sign in</button>
+                <button mdbBtn  type="button" color="blue" rounded="true" [routerLink]="['/register']" mdbWavesEffect>Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</header>
+<!--Main Navigation-->
+
+
