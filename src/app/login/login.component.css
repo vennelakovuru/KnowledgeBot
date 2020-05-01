@@ -11,15 +11,15 @@
   background-size: cover;
 }
 
-.h1{
-
-  font-size: 30px;
-}
-
 .h2{
+
+  font-size: 25px;
   color: white;
 }
 
+.h1{
+margin-bottom: 20px;
+}
 .navbar:not(.top-nav-collapse) {
   background: transparent !important;
 }
@@ -31,7 +31,7 @@
 
 
 .card {
-  background-color: rgba(126, 123, 215, 0.2);
+  background-color: rgba(235, 220, 154, 0.068);
   text-align: left;
  
   
