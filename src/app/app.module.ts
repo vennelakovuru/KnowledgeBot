@@ -15,6 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxLinkPreviewModule} from 'ngx-link-preview';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgwWowModule } from 'ngx-wow';
+import { TutorialsComponent } from './navcomponents/tutorials/tutorials.component';
+import { InstallationsComponent } from './navcomponents/installations/installations.component';
+import { PlaygroundComponent } from './navcomponents/playground/playground.component';
+import { IdeComponent } from './navcomponents/ide/ide.component';
 
 
 
@@ -24,7 +28,11 @@ import { NgwWowModule } from 'ngx-wow';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    MainComponent
+    MainComponent,
+    TutorialsComponent,
+    InstallationsComponent,
+    PlaygroundComponent,
+    IdeComponent
   ],
   imports: [
     BrowserModule,

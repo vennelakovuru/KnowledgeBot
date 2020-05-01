@@ -5,13 +5,16 @@ import {scan} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {DomSanitizer} from '@angular/platform-browser';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   loadComponent = false;
+  isCollapsed :boolean = true;
   messages: Observable<Message[]>;
 
   constructor(private router: Router, public chat: ChatService, private sanitizer: DomSanitizer) { }
@@ -31,5 +34,8 @@ export class HomeComponent implements OnInit {
     console.log('value', value);
     return this.sanitizer.bypassSecurityTrustResourceUrl(value);
   }
-
+  toggle(){
+    this.isCollapsed = !this.isCollapsed
+    console.log(this.isCollapsed)
+  } 
 }
