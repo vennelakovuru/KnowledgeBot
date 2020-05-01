@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
   
-  email: '';
+  emailid: '';
   password = '';
   showerrmsg = false;
   loginattempted = false;
@@ -62,7 +62,7 @@ onReset() {
   login() {
     this.loginattempted = true;
     const userInfo = {
-      emailId: this.email,
+      emailId: this.emailid,
       password: this.password
     };
     this.getUser(userInfo);

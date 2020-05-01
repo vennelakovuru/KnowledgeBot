@@ -155,7 +155,7 @@ ul.CTAs a {
   backface-visibility: hidden;
   transition: transform 300ms;
   transition-timing-function: linear;
-  width: 310px;
+  width: 400px;
   height: 250px;
   margin: 0;
   display: flex;

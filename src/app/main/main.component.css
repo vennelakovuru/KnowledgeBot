@@ -20,6 +20,12 @@ button{
   background: transparent !important;
 }
 
+.carousel-item {
+  background-image: url("http://mdbootstrap.com/images/regular/people/img%20(83).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 
 h2 {
