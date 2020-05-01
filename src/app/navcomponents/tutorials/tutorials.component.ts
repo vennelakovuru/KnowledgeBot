@@ -14,6 +14,6 @@ export class TutorialsComponent implements OnInit {
   toggle(){
     this.isCollapsed = !this.isCollapsed
     console.log(this.isCollapsed)
-  } 
+  }
 
 }
