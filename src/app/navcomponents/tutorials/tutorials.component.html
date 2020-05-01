@@ -1,0 +1,552 @@
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" [class.menu-close]="isCollapsed" [class.menu-close]="!isCollapsed" class="img" style="background-image: url(assets/images/red_sky.jpg)">
+        
+            <div class="sidebar-header"  >
+                <h3>Knowledge Bot</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="/knowledgebot">
+                        <i class="material-icons">home</i>  
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/tutorials">
+                        <i class="material-icons">school</i>                   
+                        Tutorials
+                    </a>
+                </li>
+                <li>                 
+                    <a href="/installations">
+                        <i class="material-icons">file_download</i>
+                         Installations
+                    </a>
+                </li>
+                <li>
+                    <a href="/playground">
+                        <i class="material-icons">desktop_mac</i> 
+                        PlayGround
+                    </a>
+                </li>
+                <li>
+                    <a href="/ide">
+                        <i class="material-icons">library_add</i>
+                        IDE Installations
+                    </a>
+                </li>                
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info"  (click)=toggle()>
+                        <i class="material-icons">menu</i>
+                    </button>
+                </div>
+            </nav>  
+
+         <!-- card content -->
+            <div class="row">
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://developer.apple.com/swift" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Swift" src="assets/images/Swift.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Swift</h4>
+                                    <div class="card-text">
+                                    Swift is a powerful and intuitive programming language for macOS, iOS, watchOS, tvOS and beyond. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and Swift includes modern features developers love. Swift code is safe by design, yet also produces software that runs lightning-fast.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.scala-lang.org/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Scala" src="assets/images/Scala.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Scala</h4>
+                                    <div class="card-text">
+                                    Scala combines object-oriented and functional programming in one concise, high-level language. Scala's static types help avoid bugs in complex applications, and its JVM and JavaScript runtimes let you build high-performance systems with easy access to huge ecosystems of libraries
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">    
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://golang.org/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Go" src="assets/images/go.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Go</h4>
+                                    <div class="card-text">
+                                    Go language is a programming language initially developed at Google in the year 2007 by Robert Griesemer, Rob Pike, and Ken Thompson. It is a statically-typed language having syntax similar to that of C. It provides garbage collection, type safety, dynamic-typing capability, many advanced built-in types such as variable length arrays and key-value maps. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                    <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.python.org " target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Python" src="assets/images/python.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Python</h4>
+                                    <div class="card-text">
+                                    Python is a cross-platform programming language, which means that it can run on multiple platforms like Windows, macOS, Linux, and has even been ported to the Java and .NET virtual machines. It is free and open-source.
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://elm-lang.org/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Elm" src="assets/images/elm.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Elm</h4>
+                                    <div class="card-text">
+                                    Elm is a functional language that compiles to JavaScript. It helps you make websites and web apps. It has a strong emphasis on simplicity and quality tooling.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.ruby-lang.org/en/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Ruby" src="assets/images/ruby.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Ruby</h4>
+                                    <div class="card-text">
+                                    A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">    
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.geeksforgeeks.org/c-plus-plus/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="C++" src="assets/images/cplus.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">C++</h4>
+                                    <div class="card-text">
+                                    C++ is a general purpose programming language and widely used now a days for competitive programming. It has imperative, object-oriented and generic programming features. C++ runs on lots of platform like Windows, Linux, Unix, Mac etc.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                    <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.cprogramming.com/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="C" src="assets/images/c.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">C</h4>
+                                    <div class="card-text">
+                                    C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. C programming is an excellent language to learn to program for beginners.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.rust-lang.org/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Rust" src="assets/images/rust.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Rust</h4>
+                                    <div class="card-text">
+                                    Rust is a new open-source systems programming language created by Mozilla and a community of volunteers, designed to help developers create fast, secure applications which take full advantage of the powerful features of modern multi-core processors. It prevents segmentation faults and guarantees thread safety, all with an easy-to-learn syntax.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.lynda.com/learning-paths/Developer/become-a-java-programmer" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Java" src="assets/images/java.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Java</h4>
+                                    <div class="card-text">
+                                    Java is a powerful general-purpose programming language. It is used to develop desktop and mobile applications, big data processing, embedded systems, and so on. According to Oracle, the company that owns Java, Java runs on 3 billion devices worldwide, which makes Java one of the most popular programming languages.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">    
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://learn.unity.com/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Unity" src="assets/images/unity.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Unity</h4>
+                                    <div class="card-text">
+                                    Unity is programmed using c#. All development is done using your choice of C#, Boo, or a dialect of JavaScript. Boo is a CLI language with very similar syntax to Python; it is, however, statically typed and has a few other differences
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                    <div class ="col-md-6 col-sm-12">
+                    <a href="https://scikit-learn.org/stable/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Machine Learning" src="assets/images/ml.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Machine Learning</h4>
+                                    <div class="card-text">
+                                    Machine learning is a method of data analysis that automates analytical model building. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.php.net/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="PHP" src="assets/images/php.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">PHP</h4>
+                                    <div class="card-text">
+                                    PHP is a popular general-purpose scripting language that is especially suited to web development.Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://dotnet.microsoft.com/apps/aspnet" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="ASP.NET" src="assets/images/asp.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">ASP.NET</h4>
+                                    <div class="card-text">
+                                    ASP.NET is a web application framework developed and marketed by Microsoft to allow programmers to build dynamic web sites. It allows you to use a full featured programming language such as C# or VB.NET to build web applications easily.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">    
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.w3schools.com/nodejs/default.asp" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="NodeJS" src="assets/images/node-js.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Node JS</h4>
+                                    <div class="card-text">
+                                    Node.js connects the ease of a scripting language (JavaScript) with the power of Unix network programming. Node.js was built on the Google V8 JavaScript engine since it was open-sourced under the BSD license. It is proficient with internet fundamentals such as HTTP, DNS, TCP.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                    <div class ="col-md-6 col-sm-12">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="JavaScript" src="assets/images/js.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Java Script</h4>
+                                    <div class="card-text">
+                                    JavaScript was initially created to “make web pages alive”.The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads.Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://reactjs.org/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="React JS" src="assets/images/reactjs.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">React JS</h4>
+                                    <div class="card-text">
+                                    React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applicationsReact is a declarative, efficient, and flexible JavaScript library for building user interfaces. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://angular.io/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="AnGular JS" src="assets/images/angular.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Angular JS</h4>
+                                    <div class="card-text">
+                                    AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications. It aims to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">    
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://vuejs.org/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Vue JS" src="assets/images/vue.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Vue JS</h4>
+                                    <div class="card-text">
+                                    Vue is a JavaScript framework for building user interfaces. Its core part is focused mainly on the view layer and it is very easy to understand. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                    <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.w3schools.com/html/default.asp" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="HTML" src="assets/images/html.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">HTML</h4>
+                                    <div class="card-text">
+                                    HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.w3schools.com/css/default.asp" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="CSS" src="assets/images/ccs.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">CSS</h4>
+                                    <div class="card-text">
+                                    Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://getbootstrap.com" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Bootstrap" src="assets/images/bootstrap.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Bootstrap</h4>
+                                    <div class="card-text">
+                                    Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">    
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.mysql.com/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="MY SQL" src="assets/images/mysql.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">MY SQL</h4>
+                                    <div class="card-text">
+                                    MySQL is the most popular Open Source Relational SQL Database Management System.MySQL is one of the best RDBMS being used for developing various web-based softwareapplications. MySQL is developed, marketed and supported by MySQL AB, which is a Swedish company.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                    <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.postgresql.org" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="PostgreSQL" src="assets/images/post.png">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">PostgreSQL</h4>
+                                    <div class="card-text">
+                                    PostgreSQL is an enterprise-class open source database management system. It supports both SQL for relational and JSON for non-relational queries. It is backed by an experienced community of developers who have made tremendous contribution to make it highly reliable DBMS system
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.oracle.com/index.html" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="ORACLE" src="assets/images/Swift.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">ORACLE</h4>
+                                    <div class="card-text">
+                                    Oracle Database Architecture. An Oracle database is a collection of data treated as a unit. ... A database server is the key to solving the problems of information management. In general, a server reliably manages a large amount of data in a multiuser environment so that many users can concurrently access the same data.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class ="col-md-6 col-sm-12">
+                    <a href="https://www.mongodb.com/" target="_new">
+                        <div class="card card-shadow"> 
+                            <div class="card-body media">
+                                <div class="imgg">     
+                                    <img alt="Mongo DB" src="assets/images/Swift.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="card-title">Mongo DB</h4>
+                                    <div class="card-text">
+                                    MongoDB : An introduction. MongoDB, the most popular NoSQL database, is an open-source document-oriented database. The term 'NoSQL' means 'non-relational'. It means that MongoDB isn't based on the table-like relational database structure but provides an altogether different mechanism for storage and retrieval of data.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
+

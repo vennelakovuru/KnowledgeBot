@@ -5,13 +5,16 @@ import {scan} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {DomSanitizer} from '@angular/platform-browser';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   loadComponent = false;
+  isCollapsed :boolean = true;
   messages: Observable<Message[]>;
 
   constructor(private router: Router, public chat: ChatService, private sanitizer: DomSanitizer) { }
@@ -31,14 +34,8 @@ export class HomeComponent implements OnInit {
     console.log('value', value);
     return this.sanitizer.bypassSecurityTrustResourceUrl(value);
   }
-  playground(pageURL, pageTitle, 
-    popupWinWidth, popupWinHeight) { 
-      console.log ('in play ground')
-      var left = (screen.width ) ; 
-      var top = (screen.height ) ; 
-      var myWindow = window.open(pageURL, pageTitle, 
-        'resizable=yes, width=' + popupWinWidth 
-        + ', height=' + popupWinHeight + ', top=' 
-        + top + ', left=' + left); 
-} 
+  toggle(){
+    this.isCollapsed = !this.isCollapsed
+    console.log(this.isCollapsed)
+  } 
 }

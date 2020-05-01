@@ -10,6 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TutorialsComponent } from './navcomponents/tutorials/tutorials.component';
+import { InstallationsComponent } from './navcomponents/installations/installations.component';
+import { PlaygroundComponent } from './navcomponents/playground/playground.component';
+import { IdeComponent } from './navcomponents/ide/ide.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +22,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    MainComponent
+    MainComponent,
+    TutorialsComponent,
+    InstallationsComponent,
+    PlaygroundComponent,
+    IdeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ChatModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
