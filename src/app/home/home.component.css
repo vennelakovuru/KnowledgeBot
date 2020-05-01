@@ -169,6 +169,7 @@ ul.CTAs a {
   transform: rotateY(180deg);
   position: absolute;
   top: 0;
+  color: black;
 }
 
 .card-flip:hover .card-front {
@@ -177,4 +178,5 @@ ul.CTAs a {
 
 .card-flip:hover .card-back {
   transform: rotateY(0deg);
+
 }
