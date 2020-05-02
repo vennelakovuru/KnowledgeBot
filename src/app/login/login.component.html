@@ -4,8 +4,14 @@
 
   <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://www.elsetge.cat/myimg/f/205-2059093_white-petaled-flower-book-tulips-coffee-hd-wallpaper.jpg);">
     <div class="full-bg-img mask rgba-black-light">
+     
 
-  
+      <div class=title>
+      <h1 class="pink-text"><i class="fas fa-chalkboard-teacher"></i> <b> Knowledge Bot </b></h1>
+      </div>
+
+    
+
   <!--Intro Section-->
   <section class="view intro-2">
     <div class="full-bg-img mask rgba-gradient">
@@ -14,15 +20,15 @@
           <div class="row flex-center pt-5 mt-3 w-100">
             <div class="col-md-6 text-center text-md-left mb-5">
               <div class="white-text">
-                <h2 class="h2" data-wow-delay="0.3s">Sign in right
+                <h2 class="h2" data-wow-delay="0.3s"> Sign in right
                   now! <br> <br>
               
-                  Ask Anything Anytime. I'm here to help you :)  </h2>
+                  Ask me anything, anytime. I'm here to help you :)  </h2>
                
                    
               </div>
             </div>
-            <div class="col-md-6 text-center text-md-left mb-5">
+            <div class="container col-6">
               <!--Form-->
               <mdb-card class="wow fadeInRight" data-wow-delay="0.3s">
                 <mdb-card-body>
@@ -37,7 +43,7 @@
                   <div class="md-form">
                     
                     <i class="fas fa-envelope prefix white-text active"></i>
-                    <input type="text"  id="form3" formControlName="email" class="form-control" [(ngModel)]="emailId" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" class="text-white form-control" mdbInput>
+                    <input type="text"  id="form3" formControlName="email" class="form-control" [(ngModel)]="emailid" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" class="text-white form-control" mdbInput>
                     <label for="form3" class="text-white">Email</label>
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                       <div *ngIf="f.email.errors.required">Email is required</div>
@@ -55,10 +61,10 @@
                       <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
                   </div>
                   </div>
+                      <div class="text-center mt-4">
+                      <button mdbBtn color="blue" (click)="login()" mdbWavesEffect>Login</button>
+                    </div>
 
-                  <div class="text-center mt-4">
-                    <button mdbBtn color="blue" mdbWavesEffect>Login</button>
-                  </div>
 
                   <div class="text-center mt-4 white-text">
                   <h3>Don't have an account?<a routerLink='/register'>Create an account</a></h3>
