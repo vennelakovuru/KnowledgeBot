@@ -22,6 +22,7 @@ import { IdeComponent } from './navcomponents/ide/ide.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { IdeComponent } from './navcomponents/ide/ide.component';
     TutorialsComponent,
     InstallationsComponent,
     PlaygroundComponent,
-    IdeComponent
+    IdeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { IdeComponent } from './navcomponents/ide/ide.component';
     MDBBootstrapModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
