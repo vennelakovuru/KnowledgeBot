@@ -58,5 +58,15 @@ export class PlaygroundComponent implements OnInit {
     this.isCollapsed = !this.isCollapsed
     console.log(this.isCollapsed)
   }
+  playground(pageURL, pageTitle, 
+    popupWinWidth, popupWinHeight) { 
+      console.log ('in play ground')
+      var left = (screen.width ) ; 
+      var top = (screen.height ) ; 
+      var myWindow = window.open(pageURL, pageTitle, 
+        'resizable=yes, width=' + popupWinWidth 
+        + ', height=' + popupWinHeight + ', top=' 
+        + top + ', left=' + left); 
+} 
 
 }
