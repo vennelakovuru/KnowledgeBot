@@ -52,17 +52,11 @@ span {
     align-items: stretch;
 }
 
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    color: #fff;
-    transition: all 0.3s;
-    font-size: 1.5em;
-}
+
 
 #sidebar.menu-close {
-    min-width: 50px;
-    max-width: 50px;
+    min-width: 70px;
+    max-width: 70px;
     text-align: center;
     font-size: .8em;
 }
@@ -94,8 +88,8 @@ span {
 }
 
 #sidebar ul li a:hover {
-    color: rgb(213, 115, 139);
-    background: #fff;
+    color: white;
+    background-color: black;
 }
 
 #sidebar ul li a i {
@@ -134,6 +128,20 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: rgb(77, 15, 51);
+    color: white;
+    font-size: 2;
+    transition: all 0.3s;
+    font-size: 1.5em;
+}
+
+
+
+
 #content {
     width: 100%;
     padding: 20px;
@@ -144,4 +152,19 @@ ul.CTAs a {
 
 .navbar {
     background: linear-gradient(pink, white)
+}
+
+.imgg {
+    height: 90px;
+    width: 90px;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.card {
+    height: 200px;
+    width: 450px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
 }
