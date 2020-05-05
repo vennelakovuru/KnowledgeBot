@@ -99,6 +99,12 @@ a[aria-expanded="true"] {
     color: #fff;
     background: #df4b5f;
 }
+.sidebar-header{
+    font-size: 30px;
+    font-family:  Akzidenz;
+    color: white;
+}
+
 
 .dropdown-toggle::after {
     display: block;

@@ -56,7 +56,7 @@ onSubmit() {
 
 addUser(userInfo) {
   console.log(userInfo);
-  this.http.post('http://localhost:3000/api/register', userInfo).subscribe(data => {
+  this.http.post('/api/register', userInfo).subscribe(data => {
     console.log('register data : ', data);
         });
 

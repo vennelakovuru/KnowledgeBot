@@ -69,7 +69,7 @@ onReset() {
   }
 
   getUser(userInfo) {
-    this.http.post('http://localhost:3000/api/login', userInfo).subscribe(data => {
+    this.http.post('/api/login', userInfo).subscribe(data => {
         console.log('login data : ', data);
         this.router.navigateByUrl('/knowledgebot');
       },

@@ -154,6 +154,12 @@ ul.CTAs a {
     padding-top: 10px;
     padding-right: 5px;
 }
+.sidebar-header{
+    font-size: 30px;
+    font-family:  Akzidenz;
+    color: white;
+}
+
 
 .card {
     height: 200px;

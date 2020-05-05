@@ -21,6 +21,11 @@ p {
     transition: all 0.3s;
     font-size: 1.5em;
 }
+.sidebar-header{
+    font-size: 30px;
+    font-family:  Akzidenz;
+    color: white;
+}
 
 a,
 a:hover,
